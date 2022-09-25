@@ -1,5 +1,5 @@
 {
-  "name": "docs",
+  "name": "@learning-turbo-changesets/docs",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -9,19 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@learning-turbo-changesets/ui": "workspace:*",
     "next": "12.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "ui": "workspace:*"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "eslint-config-custom": "workspace:*",
-    "eslint": "7.32.0",
-    "next-transpile-modules": "9.0.0",
-    "tsconfig": "workspace:*",
+    "@learning-turbo-changesets/eslint-config-custom": "workspace:*",
+    "@learning-turbo-changesets/tsconfig": "workspace:*",
     "@types/node": "^17.0.12",
     "@types/react": "18.0.17",
+    "eslint": "7.32.0",
+    "next-transpile-modules": "9.0.0",
     "typescript": "^4.5.3"
   }
 }

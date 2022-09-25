@@ -8,18 +8,23 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "changesets": "changesets",
+    "clean": "turbo run clean && rm -rf node_modules",
     "dev": "turbo run dev --parallel",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "release": "turbo run build --filter=docs^... && changeset publish",
+    "turbo": "turbo",
+    "version-packages": "changeset version"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
+    "@changesets/cli": "^2.24.4",
+    "@learning-turbo-changesets/eslint-config-custom": "workspace:*",
     "prettier": "latest",
     "turbo": "latest"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
   "packageManager": "pnpm@7.12.2"
 }
