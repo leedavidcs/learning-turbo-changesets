@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: 16.x
 
+      - name: Setup Pnpm 7.x
+        uses: pnpm/action-setup@v2.2.2
+
       - name: Install Dependencies
         run: pnpm install
 
