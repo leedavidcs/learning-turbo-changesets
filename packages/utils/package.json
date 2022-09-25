@@ -1,0 +1,25 @@
+{
+	"name": "@learning-turbo-changesets/utils",
+	"version": "0.0.0",
+	"main": "./index.tsx",
+	"types": "./index.tsx",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsup src/index.ts --format esm,cjs --dts --external react",
+		"dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
+		"lint": "TIMING=1 eslint src/**/*.ts* --fix",
+		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+	},
+	"dependencies": {
+		"@types/react": "^18.0.17",
+		"@types/react-dom": "^18.0.6",
+		"react": "^18.2.0"
+	},
+	"devDependencies": {
+		"@learning-turbo-changesets/eslint-config-custom": "workspace:*",
+		"@learning-turbo-changesets/tsconfig": "workspace:*",
+		"eslint": "^7.32.0",
+		"tsup": "^6.2.3",
+		"typescript": "^4.5.2"
+	}
+}
